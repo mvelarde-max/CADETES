@@ -1,0 +1,402 @@
+/* =========================================================
+ARCHIVO: CSS/index.css
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0f172a;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================================================
+FONDO ANIMADO
+========================================================= */
+
+.background-animation{
+
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:
+    linear-gradient(45deg,
+    #0f172a,
+    #1e293b,
+    #111827);
+
+    background-size:400% 400%;
+
+    animation:bgAnimation 12s infinite;
+
+    z-index:-1;
+}
+
+@keyframes bgAnimation{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.header{
+
+    width:100%;
+    min-height:90px;
+
+    background:#111827;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:10px 25px;
+
+    position:fixed;
+    top:0;
+
+    z-index:1000;
+
+    border-bottom:3px solid #2563eb;
+}
+
+.header h1{
+
+    font-size:clamp(22px,4vw,40px);
+
+    font-weight:bold;
+}
+
+.logo{
+
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.clock{
+
+    font-size:28px;
+    font-weight:bold;
+    color:#60a5fa;
+}
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:28px;
+}
+
+/* =========================================================
+SIDEBAR
+========================================================= */
+
+.sidebar{
+
+    position:fixed;
+
+    top:90px;
+    left:0;
+
+    width:260px;
+
+    height:100vh;
+
+    background:#1e293b;
+
+    overflow-y:auto;
+
+    padding-top:20px;
+
+    border-right:3px solid #2563eb;
+
+    transition:0.4s;
+}
+
+.sidebar h3{
+
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 20px;
+
+    transition:0.3s;
+
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar a:hover{
+
+    background:#2563eb;
+    padding-left:28px;
+}
+
+/* =========================================================
+CONTENT
+========================================================= */
+
+.content{
+
+    margin-left:260px;
+
+    padding:10px 20px 40px 20px;
+}
+/* =========================================================
+TV VIDEO
+========================================================= */
+
+.tv-container{
+
+    background:#111827;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+
+    margin-bottom:40px;
+}
+
+.tv-header{
+
+    background:#2563eb;
+
+    padding:12px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-weight:bold;
+}
+
+.tv-header button{
+
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+}
+
+.video-container{
+
+    width:100%;
+    background:black;
+}
+
+video{
+
+    width:100%;
+    height:auto;
+
+    max-height:80vh;
+
+    object-fit:contain;
+
+    background:black;
+}
+
+/* =========================================================
+NOTICIAS
+========================================================= */
+
+.news-section{
+
+    margin-top:40px;
+}
+
+.news-section h2{
+
+    margin-bottom:20px;
+}
+
+.news-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+}
+
+.news-card{
+
+    background:#1e293b;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    transition:0.3s;
+}
+
+.news-card:hover{
+
+    transform:translateY(-5px);
+}
+
+/* =========================================================
+GALERIA
+========================================================= */
+
+.gallery{
+
+    margin-top:50px;
+}
+
+.gallery h2{
+
+    margin-bottom:20px;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:15px;
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+    transition:0.3s;
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.03);
+}
+
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:768px){
+
+    .menu-btn{
+
+        display:block;
+    }
+
+    .sidebar{
+
+        left:-260px;
+    }
+
+    .sidebar.active{
+
+        left:0;
+    }
+
+    .content{
+
+        margin-left:0;
+    }
+
+    .clock{
+
+        font-size:20px;
+    }
+
+    .header{
+
+        gap:10px;
+    }
+
+    .logo{
+
+        width:55px;
+        height:55px;
+    }
+}
+
+.himno-section{
+
+    margin-top:40px;
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    text-align:center;
+}
+
+.himno-section h2{
+
+    margin-bottom:20px;
+}
+
+.gallery-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:12px;
+}
+
+.gallery-card span{
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    padding:10px;
+
+    text-align:center;
+
+    font-weight:bold;
+}
