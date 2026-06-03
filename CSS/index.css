@@ -1,0 +1,160 @@
+:root {
+
+    --azul: #0d6efd;
+    --azul-oscuro: #084298;
+
+    --gris: #f5f6fa;
+
+    --blanco: #ffffff;
+
+    --texto: #333333;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: var(--gris);
+    color: var(--texto);
+    font-family: Segoe UI, sans-serif;
+
+}
+
+.navbar-lmgb {
+
+    background: var(--azul);
+
+}
+
+.hero {
+
+    background: linear-gradient(rgba(13, 110, 253, .8),
+            rgba(8, 66, 152, .8)),
+        url("https://images.unsplash.com/photo-1509062522246-3755977927d7");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+.hero h1 {
+
+    font-size: 4rem;
+    font-weight: 700;
+
+}
+
+.hero h2 {
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-weight: 700;
+
+}
+
+.noticia-card {
+
+    border: none;
+
+    transition: .3s;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .1);
+
+}
+
+.noticia-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.videos-section {
+
+    background: var(--azul);
+
+    padding: 80px 0;
+
+}
+
+.panel-card {
+
+    border: none;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .1);
+
+}
+
+.panel-card .card-header {
+
+    font-weight: bold;
+
+}
+
+footer {
+
+    background: #1e293b;
+
+    color: white;
+
+    padding: 30px;
+
+    margin-top: 50px;
+
+}
+
+@media(max-width:768px) {
+
+    .hero h1 {
+
+        font-size: 2.5rem;
+
+    }
+
+    .hero h2 {
+
+        font-size: 1.2rem;
+
+    }
+
+}
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #0d6efd;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+}
